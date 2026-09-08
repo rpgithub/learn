@@ -1,0 +1,28 @@
+div ol li {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding-bottom: 30px;
+}
+
+div ol li a {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    width: 100%;
+    text-align: left;
+}
+
+.code {
+    display: block;
+
+
+    font-family: monospace;
+    font-size: 14px;
+    background-color: lightgray;
+    padding: 5px;
+    border: 1px solid black;
+
+    width: 700px;
+
+    padding-left: 40px;
+}
