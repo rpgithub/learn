@@ -21,6 +21,7 @@
     font-weight: bold;
     font-size: 18px;
 
+    padding-left: 20px;
     padding-bottom: 10px;
 }
 
@@ -61,4 +62,8 @@ div ol li a {
 
     margin-top: 5px;
     margin-left: 40px;
+}
+
+table {
+    margin-left: 20px;
 }

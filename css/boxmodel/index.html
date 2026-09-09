@@ -4,24 +4,92 @@
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>Page Title</title>
-    <link rel='stylesheet' href='one.css'>
+    <link rel='stylesheet' href='../common.css'>
 </head>
 <body> 
-    <div class="cbox">
-        This is a Content Box. Inspect the layout, you will see that width of content is straight from the width attribute.
-    </div>
-    <div class="bbox">
-        This is a Border Box. Inspect the layout, you will see that width of content is derived from the width attribute of the box. The content width is calculated as: Content Width = Width Attribute - (Padding + Border)   
-    </div>
-    <div>
-        <div class="display1">One</div>
-        <div class="display1">Two</div>
-        <div class="display1">Three</div>
-    </div>
-    <div>
-        <div class="display2">One</div>
-        <div class="display2">Two</div>
-        <div class="display2">Three</div>
+    <div class="page">
+        <div class="page-title"> CSS Box Model </div>
+        <div class="page-contents">
+            The CSS Box Model describes how the browser calculates the size and spacing of every HTML element. It has 4 parts
+            <ol style="list-style-position: inside;">
+                <li>Content Box</li>
+                <li>Padding Box</li>
+                <li>Border Box</li>
+                <li>Margin Box</li>
+            </ol>
+            ┌────────────── Margin ──────────────┐<br/>
+            │  ┌──────────── Border ───────────┐ │<br/>
+            │  │  ┌──────── Padding ─────────┐ │ │<br/>
+            │  │  │         Content          │ │ │<br/>
+            │  │  └──────────────────────────┘ │ │<br/>
+            │  └───────────────────────────────┘ │<br/>
+            └────────────────────────────────────┘<br/>
+        </div>
+        <div class="page-subtitle"> CSS Box Model Properties </div>
+        <div class="page-contents">
+            <table>
+                <thead>
+                    <tr>
+                    <th>Part</th>
+                    <th>Main CSS Properties</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td>Content</td>
+                    <td>width, height</td>
+                    </tr>
+                    <tr>
+                    <td>Padding</td>
+                    <td>padding, padding-top, padding-right, padding-bottom, padding-left</td>
+                    </tr>
+                    <tr>
+                    <td>Border</td>
+                    <td>border, border-width, border-style, border-color, border-radius</td>
+                    </tr>
+                    <tr>
+                    <td>Margin</td>
+                    <td>margin, margin-top, margin-right, margin-bottom, margin-left</td>
+                    </tr>
+                    <tr>
+                    <td>Box Sizing</td>
+                    <td>box-sizing</td>
+                    </tr>
+                </tbody>
+            </table> 
+        </div>
+        <div class="page-subtitle"> CSS box-sizing property values </div>
+            <table>
+                <thead>
+                    <tr>
+                    <th>Value</th>
+                    <th>Meaning</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td>content-box</td>
+                    <td>Width and height apply only to the content. Padding and border are added outside.</td>
+                    </tr>
+                    <tr>
+                    <td>border-box</td>
+                    <td>Width and height include content, padding, and border.</td>
+                    </tr>
+                    <tr>
+                    <td>inherit</td>
+                    <td>Inherits the value from the parent element.</td>
+                    </tr>
+                    <tr>
+                    <td>initial</td>
+                    <td>Resets to the default value: content-box.</td>
+                    </tr>
+                    <tr>
+                    <td>unset</td>
+                    <td>Resets the property to its inherited or initial value.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
     
 </body>
