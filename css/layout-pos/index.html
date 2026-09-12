@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <title>Layout and Positioning</title>
+        <link rel='stylesheet' href='../common.css'>
+    </head>
+    <body>
+        <div class="page">
+            <div class="page-title">Layout and Positioning</div>
+            <div class="page-contents"> Layout and positioning are important concepts in CSS that allow you to control the placement and arrangement of elements on a web page. There are several techniques and properties available in CSS to achieve different layout and positioning effects.
+                <div class="page-subtitle">CSS Layout Techniques</div>
+                <strong>display</strong> property controls the layout type of an element and how it participates in the page layout. Its possible values include: block, inline, inline-block, flex, grid, none, etc. Each value has its own behavior and use cases.
+                <table>
+                        <thead>
+                            <tr>
+                            <th>Display Value</th>
+                            <th>Explanation</th>
+                            <th>Common Use Cases</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td>block</td>
+                            <td>Starts on a new line and generally takes the available width.</td>
+                            <td>Sections, divs, paragraphs, headings</td>
+                            </tr>
+                            <tr>
+                            <td>inline</td>
+                            <td>Stays within the current line and takes only the space it needs.</td>
+                            <td>Text, links, spans</td>
+                            </tr>
+                            <tr>
+                            <td>inline-block</td>
+                            <td>Stays on the same line but allows width and height to be set.</td>
+                            <td>Buttons, badges, labels</td>
+                            </tr>
+                            <tr>
+                            <td>flex</td>
+                            <td>Creates a Flexbox container for arranging its direct children.</td>
+                            <td>Navigation bars, rows, columns, alignment</td>
+                            </tr>
+                            <tr>
+                            <td>inline-flex</td>
+                            <td>Creates a Flexbox container that behaves like an inline element.</td>
+                            <td>Small inline groups of UI elements</td>
+                            </tr>
+                            <tr>
+                            <td>grid</td>
+                            <td>Creates a Grid container for arranging children in rows and columns.</td>
+                            <td>Page layouts, card layouts, dashboards</td>
+                            </tr>
+                            <tr>
+                            <td>inline-grid</td>
+                            <td>Creates a Grid container that behaves like an inline element.</td>
+                            <td>Small inline grid layouts</td>
+                            </tr>
+                            <tr>
+                            <td>none</td>
+                            <td>Removes the element from the page layout and makes it invisible.</td>
+                            <td>Hiding elements, conditional UI</td>
+                            </tr>
+                        </tbody>
+                </table>
+                Flexbox is a CSS layout system for arranging, aligning, and distributing elements in a row or column.
+                <ul>
+                    <li>Arrange items horizontally or vertically</li>
+                    <li>Align items</li>
+                    <li>Distribute available space</li>
+                    <li>Add consistent spacing between items</li>
+                    <li>Create responsive layouts</li>
+                </ul>
+                CSS Grid is a CSS layout system used to arrange elements in rows and columns.
+                <h3>Flexbox vs Grid</h3>
+                <ul>
+                <li><strong>Flexbox</strong> → primarily <strong>one-dimensional</strong>: row or column</li>
+                <li><strong>Grid</strong> → <strong>two-dimensional</strong>: rows and columns</li>
+                </ul>
+            </div>
+    </body> 
+</html>

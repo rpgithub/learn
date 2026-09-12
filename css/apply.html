@@ -1,85 +1,259 @@
 <!DOCTYPE html>
-<html lang='en'>
-    <head>
-        <meta charset='utf-8'>
-        <meta name='viewport' content='width=device-width, initial-scale=1'>
-        <title>Apply CSS Styles</title>
-        <link rel='stylesheet' href='common.css'>
-    </head>
-    <body>
-        <div class="page">
-            <div class="page-title"> CSS Fundamentals </div>
-            <div class="page-contents">
-            There are two parts to styling HTML elements using CSS. 
-            <ol style="list-style-position: inside;">
-                <li>Writing CSS Rules</li>
-                <li>Applying CSS Rules to html elements</li>
-            </ol>
-            <div class="page-subtitle"> Writing CSS Rules </div> 
-            A CSS rule comprises of three parts: Selector, Property and Value. A rule defines how a specific HTML element should be styled. 
-                <ul> 
+<html>
+<head>
+    <title>CSS Fundamentals</title>
+
+    <link rel="stylesheet" href="common.css">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <div class="page-title">
+            CSS Fundamentals
+        </div>
+
+        <div class="page-subtitle">
+            Writing CSS Rules
+        </div>
+
+        <div class="page-contents">
+
+            <p>
+                A CSS rule consists of three main parts:
+                <b>Selector</b>, <b>Property</b>, and <b>Value</b>.
+            </p>
+
+            <div class="page-section">
+
+                <h3>Selector</h3>
+
+                <p>
+                    A selector is used to target HTML elements that you
+                    want to style.
+                </p>
+
+                <ul>
                     <li>
-                       <b> Selector: </b> A selector is used to target HTML elements for styling , a selector can target HTML elements using ID, Class or Tag name.
-                        <div>
-                        <div class="code">
-                            Example: 
-                            Style using ID selector<br/>
-                            #t1 { color: red; font-size: 20px; }<br/>
-                            This will target the HTML element with id='t1' and apply the styles defined in the rule.
-                            Style using Class selector<br/>
-                        </div>
-                        <div class="code">
-                            Example: 
-                            .bbox { color: red; font-size: 20px; }<br/>
-                            This will target all HTML elements with class='bbox' and apply the styles defined in the rule.
-                        </div>
-                        <div class="code">
-                            Example: 
-                            p { color: red; font-size: 20px; }<br/>
-                            This will target all HTML elements with tag name 'p' and apply the styles defined in the rule.
-                        </div>
-                        </div>
+                        ID selector — targets an element by its ID
                     </li>
-                    <li><b>Property:</b> It is a style attribute of the HTML element</li>
-                    <li><b>Value:</b> It is the value of the property</li>
-                </ul>    
-            <div class="page-subtitle"> Defining rules</div>
-            Rules can be defined in three ways: Inline, Internal and External.
-            <ol style="list-style-position: inside;">
-                <li> <b>Inline Styles:</b> Put styles rules directly in the HTML element using style attribute 
-                     <div class="code">
-                        Example:<br/><br/>
-                            &lt;span style="color: red; font-size: 20px;"&gt;<br/>This text is red and 20px size<br/>&lt;/span&gt;    
-                     </div>
-                </li>
-                <li> 
-                    <b>Internal Styles:</b> Put styles in the head section of the HTML file 
-                    <div class="code">
-                        Example:<br/><br/>
-                            &lt;head&gt;<br/>
-                            &lt;style&gt;<br/>
-                            span { color: red; font-size: 20px; }<br/>
-                            &lt;/style&gt;<br/>
-                            &lt;/head&gt;<br/>
-                            &lt;body&gt;<br/>
-                            &lt;span&gt;This text is red and 20px size&lt;/span&gt;<br/>
-                            &lt;/body&gt;    
-                     </div>
-                </li>
-                <li> <b>External Styles:</b> Put styles in a separate CSS file and link it to the HTML file 
-                     <div class="code">
-                        Example: Add this line in the head section of HTML file to link the external CSS file:<br/><br/>
-                        &lt;link rel='stylesheet' href='common.css'/&gt;    
-                     </div>
-                </li>
-                <li> <b>Targeting from external:</b> We can target html elements using ID, Class or Tag name from external CSS file.
-                </li>
-            </ol>
+
+                    <li>
+                        Class selector — targets elements by their class
+                    </li>
+
+                    <li>
+                        Tag selector — targets elements by their tag name
+                    </li>
+                </ul>
+
+                <h4>Example: ID Selector</h4>
+
+                <div class="code">
+#t1 {
+    color: red;
+    font-size: 20px;
+}
+                </div>
+
+                <p>
+                    This targets the HTML element with
+                    <b>id="t1"</b> and applies the specified styles.
+                </p>
+
+                <h4>Example: Class Selector</h4>
+
+                <div class="code">
+.bbox {
+    color: red;
+    font-size: 20px;
+}
+                </div>
+
+                <p>
+                    This targets all HTML elements that have
+                    <b>class="bbox"</b>.
+                </p>
+
+                <h4>Example: Tag Selector</h4>
+
+                <div class="code">
+p {
+    color: red;
+    font-size: 20px;
+}
+                </div>
+
+                <p>
+                    This targets all <b>&lt;p&gt;</b> elements on the page.
+                </p>
+
             </div>
+
+
+            <div class="page-section">
+
+                <h3>Property</h3>
+
+                <p>
+                    A property specifies the aspect of an HTML element
+                    that you want to change.
+                </p>
+
+                <ul>
+                    <li>color</li>
+                    <li>font-size</li>
+                    <li>background-color</li>
+                    <li>margin</li>
+                    <li>padding</li>
+                </ul>
+
+                <p>
+                    For example:
+                </p>
+
+                <div class="code">
+color: red;
+                </div>
+
+                <p>
+                    <b>color</b> is the property.
+                </p>
+
+            </div>
+
+
+            <div class="page-section">
+
+                <h3>Value</h3>
+
+                <p>
+                    A value specifies what you want the property to be set to.
+                </p>
+
+                <div class="code">
+color: red;
+                </div>
+
+                <p>
+                    <b>red</b> is the value of the <b>color</b> property.
+                </p>
+
+            </div>
+
+
+            <div class="page-section">
+
+                <h3>Property and Value Together</h3>
+
+                <div class="code">
+font-size: 20px;
+                </div>
+
+                <ul>
+                    <li><b>font-size</b> → Property</li>
+                    <li><b>20px</b> → Value</li>
+                </ul>
+
+            </div>
+
         </div>
-        <div style="text-align: center; margin-top: 20px;">
-            <a href="index.html"> &lt;&lt; Back</a>
+
+
+        <div class="page-subtitle">
+            Applying CSS Rules
         </div>
-    </body>
+
+        <div class="page-contents">
+
+            <p>
+                CSS rules can be added to HTML in three ways:
+            </p>
+
+            <ol>
+                <li>Inline CSS</li>
+                <li>Internal CSS</li>
+                <li>External CSS</li>
+            </ol>
+
+
+            <div class="page-section">
+
+                <h3>Inline CSS</h3>
+
+                <p>
+                    With inline CSS, the styles are written directly
+                    inside an HTML element using the
+                    <b>style</b> attribute.
+                </p>
+
+                <div class="code">
+&lt;span style="color: red; font-size: 20px;"&gt;
+    This text is red and 20px in size.
+&lt;/span&gt;
+                </div>
+
+            </div>
+
+
+            <div class="page-section">
+
+                <h3>Internal CSS</h3>
+
+                <p>
+                    With internal CSS, CSS rules are placed inside a
+                    <b>&lt;style&gt;</b> element in the
+                    <b>&lt;head&gt;</b> section.
+                </p>
+
+                <div class="code">
+&lt;head&gt;
+    &lt;style&gt;
+        span {
+            color: red;
+            font-size: 20px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+                </div>
+
+            </div>
+
+
+            <div class="page-section">
+
+                <h3>External CSS</h3>
+
+                <p>
+                    With external CSS, CSS rules are placed in a
+                    separate CSS file.
+                </p>
+
+                <div class="code">
+/* common.css */
+
+span {
+    color: red;
+    font-size: 20px;
+}
+                </div>
+
+                <p>
+                    The CSS file is then linked to the HTML document:
+                </p>
+
+                <div class="code">
+&lt;head&gt;
+    &lt;link rel="stylesheet" href="common.css"&gt;
+&lt;/head&gt;
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
 </html>
-    

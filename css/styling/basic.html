@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS - Basic Styling</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.5;
+        }
+
+        section {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .example {
+            padding: 15px;
+            margin: 10px 0 20px 0;
+        }
+
+        .code {
+            display: block;
+            font-family: monospace;
+            font-size: 14px;
+            background-color: lightgray;
+            padding: 10px;
+            border: 1px solid black;
+            width: 700px;
+            margin: 10px 0 20px 20px;
+            white-space: pre-wrap;
+        }
+
+        .top {
+            display: block;
+            margin-top: 20px;
+        }
+
+
+        /* =========================
+           1. COLORS
+           ========================= */
+
+        .color-example {
+            color: white;
+            background-color: blue;
+        }
+
+
+        /* =========================
+           2. TYPOGRAPHY
+           ========================= */
+
+        .typography-example {
+            font-family: Georgia, serif;
+            font-size: 24px;
+            font-weight: bold;
+            font-style: italic;
+            text-align: center;
+            line-height: 1.5;
+            letter-spacing: 2px;
+            text-decoration: underline;
+        }
+
+
+        /* =========================
+           3. BACKGROUNDS
+           ========================= */
+
+        .background-color-example {
+            background-color: lightblue;
+        }
+
+        .background-image-example {
+            width: 300px;
+            height: 120px;
+
+            background-image: url("image.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+
+        /* =========================
+           4. BORDERS
+           ========================= */
+
+        .border-example {
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+
+        .solid-border {
+            border: 2px solid black;
+        }
+
+        .dashed-border {
+            border: 2px dashed black;
+        }
+
+        .dotted-border {
+            border: 2px dotted black;
+        }
+
+    </style>
+</head>
+
+<body id="top">
+
+    <h1>CSS - Basic Styling</h1>
+
+
+    <!-- =========================
+         TABLE OF CONTENTS
+         ========================= -->
+
+    <section>
+
+        <h2>Basic Styling</h2>
+
+        <ul>
+            <li><a href="#colors">1. Colors</a></li>
+            <li><a href="#typography">2. Typography</a></li>
+            <li><a href="#backgrounds">3. Backgrounds</a></li>
+            <li><a href="#borders">4. Borders</a></li>
+        </ul>
+
+    </section>
+
+
+    <!-- =========================
+         1. COLORS
+         ========================= -->
+
+    <section>
+
+        <h2 id="colors">1. Colors</h2>
+
+        <p>
+            The <b>color</b> property changes the text color.
+            The <b>background-color</b> property changes the
+            background color.
+        </p>
+
+        <div class="code">
+.color-example {
+    color: white;
+    background-color: blue;
+}
+        </div>
+
+        <p class="color-example example">
+            White text with a blue background.
+        </p>
+
+        <a class="top" href="#top">↑ Top</a>
+
+    </section>
+
+
+    <!-- =========================
+         2. TYPOGRAPHY
+         ========================= -->
+
+    <section>
+
+        <h2 id="typography">2. Typography</h2>
+
+        <p>
+            Typography controls the appearance and presentation
+            of text.
+        </p>
+
+        <div class="code">
+.typography-example {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    text-decoration: underline;
+}
+        </div>
+
+        <p class="typography-example">
+            This is a typography example.
+        </p>
+
+        <a class="top" href="#top">↑ Top</a>
+
+    </section>
+
+
+    <!-- =========================
+         3. BACKGROUNDS
+         ========================= -->
+
+    <section>
+
+        <h2 id="backgrounds">3. Backgrounds</h2>
+
+        <p>
+            Background properties control the background color
+            or image of an element.
+        </p>
+
+        <h3>Background Color</h3>
+
+        <div class="code">
+.background-color-example {
+    background-color: lightblue;
+}
+        </div>
+
+        <div class="background-color-example example">
+            This box has a light blue background.
+        </div>
+
+
+        <h3>Background Image</h3>
+
+        <div class="code">
+.background-image-example {
+    width: 300px;
+    height: 120px;
+
+    background-image: url("image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+        </div>
+
+        <div class="background-image-example">
+        </div>
+
+        <a class="top" href="#top">↑ Top</a>
+
+    </section>
+
+
+    <!-- =========================
+         4. BORDERS
+         ========================= -->
+
+    <section>
+
+        <h2 id="borders">4. Borders</h2>
+
+        <p>
+            The <b>border</b> property adds a border around
+            an element.
+        </p>
+
+        <div class="code">
+.border-example {
+    border: 2px solid black;
+    border-radius: 10px;
+}
+        </div>
+
+        <div class="border-example example">
+            Black border with rounded corners.
+        </div>
+
+
+        <h3>Border Styles</h3>
+
+        <div class="code">
+.solid-border {
+    border: 2px solid black;
+}
+
+.dashed-border {
+    border: 2px dashed black;
+}
+
+.dotted-border {
+    border: 2px dotted black;
+}
+        </div>
+
+        <p class="solid-border example">
+            Solid border
+        </p>
+
+        <p class="dashed-border example">
+            Dashed border
+        </p>
+
+        <p class="dotted-border example">
+            Dotted border
+        </p>
+
+        <a class="top" href="#top">↑ Top</a>
+
+    </section>
+
+
+    <p>
+        <a href="box-model.html">Next: Box & Dimensions →</a>
+    </p>
+
+</body>
+</html>

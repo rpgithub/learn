@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS - Element Behavior</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.5;
+        }
+
+        section {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .code {
+            display: block;
+            font-family: monospace;
+            font-size: 14px;
+            background-color: lightgray;
+            padding: 10px;
+            border: 1px solid black;
+            width: 700px;
+            margin: 10px 0 20px 20px;
+            white-space: pre-wrap;
+        }
+
+        .top {
+            display: block;
+            margin-top: 20px;
+        }
+
+
+        /* =========================
+           9. POSITIONING
+           ========================= */
+
+        .position-container {
+            position: relative;
+
+            width: 400px;
+            height: 150px;
+
+            border: 1px solid black;
+        }
+
+        .position-example {
+            position: absolute;
+
+            top: 20px;
+            right: 20px;
+
+            padding: 10px;
+
+            background-color: orange;
+        }
+
+
+        /* =========================
+           10. OVERFLOW
+           ========================= */
+
+        .overflow-example {
+            width: 250px;
+            height: 80px;
+
+            overflow: auto;
+
+            border: 1px solid black;
+        }
+
+
+        /* =========================
+           11. VISIBILITY
+           ========================= */
+
+        .visibility-hidden {
+            visibility: hidden;
+        }
+
+    </style>
+</head>
+
+<body id="top">
+
+    <h1>CSS - Element Behavior</h1>
+
+
+    <!-- =========================
+         TABLE OF CONTENTS
+         ========================= -->
+
+    <section>
+
+        <h2>Element Behavior</h2>
+
+        <ul>
+            <li>
+                <a href="#positioning">
+                    9. Positioning
+                </a>
+            </li>
+
+            <li>
+                <a href="#overflow">
+                    10. Overflow
+                </a>
+            </li>
+
+            <li>
+                <a href="#visibility">
+                    11. Visibility
+                </a>
+            </li>
+        </ul>
+
+    </section>
+
+
+    <!-- =========================
+         9. POSITIONING
+         ========================= -->
+
+    <section>
+
+        <h2 id="positioning">9. Positioning</h2>
+
+        <p>
+            The <b>position</b> property controls how an element
+            is positioned on the page.
+        </p>
+
+
+        <h3>Relative + Absolute</h3>
+
+        <p>
+            An absolutely positioned element is positioned
+            relative to its nearest positioned ancestor.
+        </p>
+
+        <div class="code">
+.position-container {
+    position: relative;
+}
+
+.position-example {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+        </div>
+
+        <div class="position-container">
+
+            <div class="position-example">
+                Positioned box
+            </div>
+
+        </div>
+
+
+        <h3>Fixed</h3>
+
+        <p>
+            A fixed element stays in the same position relative
+            to the browser window when the page is scrolled.
+        </p>
+
+        <div class="code">
+.help {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+        </div>
+
+
+        <h3>Sticky</h3>
+
+        <p>
+            A sticky element behaves normally until it reaches
+            a specified position.
+        </p>
+
+        <div class="code">
+.header {
+    position: sticky;
+    top: 0;
+}
+        </div>
+
+        <a class="top" href="#top">↑ Top</a>
+
+    </section>
+
+
+    <!-- =========================
+         10. OVERFLOW
+         ========================= -->
+
+    <section>
+
+        <h2 id="overflow">10. Overflow</h2>
+
+        <p>
+            Overflow controls what happens when content does not
+            fit inside an element.
+        </p>
+
+
+        <h3>Auto</h3>
+
+        <div class="code">
+.overflow-example {
+    width: 250px;
+    height: 80px;
+    overflow: auto;
+}
+        </div>
+
+        <div class="overflow-example">
+
+            This is a long piece of text inside a small box.
+            The content does not fit within the specified height,
+            so a scrollbar appears because overflow is set to auto.
+
+        </div>
+
+
+        <h3>Other Values</h3>
+
+        <div class="code">
+overflow: visible;
+overflow: hidden;
+overflow: scroll;
+overflow: auto;
+        </div>
+
+        <a class="top" href="#top">↑ Top</a>
+
+    </section>
+
+
+    <!-- =========================
+         11. VISIBILITY
+         ========================= -->
+
+    <section>
+
+        <h2 id="visibility">11. Visibility</h2>
+
+        <p>
+            The <b>visibility</b> property controls whether
+            an element is visible.
+        </p>
+
+
+        <h3>Visible</h3>
+
+        <div class="code">
+.box {
+    visibility: visible;
+}
+        </div>
+
+
+        <h3>Hidden</h3>
+
+        <div class="code">
+.box {
+    visibility: hidden;
+}
+        </div>
+
+        <p>
+            <b>visibility: hidden</b> hides the element but
+            keeps its space in the layout.
+        </p>
+
+        <p>
+            Text before the hidden element.
+        </p>
+
+        <p class="visibility-hidden">
+            This text is hidden.
+        </p>
+
+        <p>
+            Text after the hidden element.
+        </p>
+
+
+        <h3>Visibility vs Display</h3>
+
+        <div class="code">
+/* Hides the element but keeps its space */
+.box {
+    visibility: hidden;
+}
+
+/* Hides the element and removes its space */
+.box {
+    display: none;
+}
+        </div>
+
+
+        <a class="top" href="#top">↑ Top</a>
+
+    </section>
+
+
+    <p>
+        <a href="box-model.html">← Box & Dimensions</a>
+        |
+        <a href="styling.html">
+            Basic Styling
+        </a>
+    </p>
+
+</body>
+</html>

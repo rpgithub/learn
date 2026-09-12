@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS - Box & Dimensions</title>
+
+    <style>
+
+        /* =========================
+           PAGE STYLING
+           ========================= */
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.5;
+        }
+
+        section {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .example {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .code {
+            display: block;
+            font-family: monospace;
+            font-size: 14px;
+            background-color: lightgray;
+            padding: 10px;
+            border: 1px solid black;
+            width: 700px;
+            margin: 10px 0 20px 20px;
+            white-space: pre-wrap;
+        }
+
+        .top {
+            display: block;
+            margin-top: 20px;
+        }
+
+
+        /* =========================
+           5. BOX MODEL
+           ========================= */
+
+        .box-model-example {
+            width: 200px;
+
+            padding: 20px;
+
+            border: 5px solid black;
+
+            margin: 20px;
+
+            background-color: lightblue;
+        }
+
+        .box-model-diagram {
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+
+
+        /* =========================
+           6. SPACING
+           ========================= */
+
+        .spacing-example {
+            margin: 30px;
+            padding: 20px;
+
+            background-color: lightgreen;
+        }
+
+
+        /* =========================
+           7. SIZING
+           ========================= */
+
+        .sizing-example {
+            width: 300px;
+            height: 100px;
+
+            background-color: lightblue;
+        }
+
+
+        /* =========================
+           8. DISPLAY
+           ========================= */
+
+        .display-block {
+            display: block;
+
+            background-color: lightgreen;
+            padding: 10px;
+        }
+
+        .display-inline {
+            display: inline;
+
+            background-color: yellow;
+            padding: 10px;
+        }
+
+        .display-inline-block {
+            display: inline-block;
+
+            width: 150px;
+            padding: 10px;
+
+            background-color: lightpink;
+        }
+
+    </style>
+</head>
+
+
+<body id="top">
+
+    <h1>CSS - Box & Dimensions</h1>
+
+
+    <!-- =========================
+         TABLE OF CONTENTS
+         ========================= -->
+
+    <section>
+
+        <h2>Box & Dimensions</h2>
+
+        <ul>
+            <li><a href="#box-model">Box Model</a></li>
+            <li><a href="#spacing">Spacing</a></li>
+            <li><a href="#sizing">Sizing</a></li>
+            <li><a href="#display">Display</a></li>
+        </ul>
+
+    </section>
+
+
+    <!-- =========================
+         5. BOX MODEL
+         ========================= -->
+
+    <section>
+
+        <h2 id="box-model">5. Box Model</h2>
+
+        <p>
+            Every HTML element can be treated as a box.
+            The box consists of four areas:
+        </p>
+
+        <ul>
+            <li>Content</li>
+            <li>Padding</li>
+            <li>Border</li>
+            <li>Margin</li>
+        </ul>
+
+         <div class="page">
+        <div class="page-title"> CSS Box Model </div>
+        <div class="page-contents">
+            The CSS Box Model describes how the browser calculates the size and spacing of every HTML element. It has 4 parts
+            <ol style="list-style-position: inside;">
+                <li>Content Box</li>
+                <li>Padding Box</li>
+                <li>Border Box</li>
+                <li>Margin Box</li>
+            </ol>
+            <div class="box-model-diagram">
+                ┌────────────── Margin ──────────────┐<br/>
+                │  ┌──────────── Border ───────────┐ │<br/>
+                │  │  ┌──────── Padding ─────────┐ │ │<br/>
+                │  │  │         Content          │ │ │<br/>
+                │  │  └──────────────────────────┘ │ │<br/>
+                │  └───────────────────────────────┘ │<br/>
+                └────────────────────────────────────┘
+            </div>
+        </div>
+        <div class="page-subtitle"> CSS Box Model Properties </div>
+        <div class="page-contents">
+            <table>
+                <thead>
+                    <tr>
+                    <th>Part</th>
+                    <th>Main CSS Properties</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td>Content</td>
+                    <td>width, height</td>
+                    </tr>
+                    <tr>
+                    <td>Padding</td>
+                    <td>padding, padding-top, padding-right, padding-bottom, padding-left</td>
+                    </tr>
+                    <tr>
+                    <td>Border</td>
+                    <td>border, border-width, border-style, border-color, border-radius</td>
+                    </tr>
+                    <tr>
+                    <td>Margin</td>
+                    <td>margin, margin-top, margin-right, margin-bottom, margin-left</td>
+                    </tr>
+                    <tr>
+                    <td>Box Sizing</td>
+                    <td>box-sizing</td>
+                    </tr>
+                </tbody>
+            </table> 
+        </div>
+        <div class="page-subtitle"> CSS box-sizing property values </div>
+            <table>
+                <thead>
+                    <tr>
+                    <th>Value</th>
+                    <th>Meaning</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td>content-box</td>
+                    <td>Width and height apply only to the content. Padding and border are added outside.</td>
+                    </tr>
+                    <tr>
+                    <td>border-box</td>
+                    <td>Width and height include content, padding, and border.</td>
+                    </tr>
+                    <tr>
+                    <td>inherit</td>
+                    <td>Inherits the value from the parent element.</td>
+                    </tr>
+                    <tr>
+                    <td>initial</td>
+                    <td>Resets to the default value: content-box.</td>
+                    </tr>
+                    <tr>
+                    <td>unset</td>
+                    <td>Resets the property to its inherited or initial value.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+        <a class="top" href="#top">↑ Top</a>
+
+    </section>
+
+
+    <!-- =========================
+         6. SPACING
+         ========================= -->
+
+    <section>
+
+        <h2 id="spacing">Spacing</h2>
+
+        <p>
+            CSS provides two main properties for controlling
+            space around an element:
+        </p>
+
+        <ul>
+            <li>
+                <b>padding</b> — space inside the element
+            </li>
+
+            <li>
+                <b>margin</b> — space outside the element
+            </li>
+        </ul>
+
+        <div class="code">
+.spacing-example {
+    margin: 30px;
+    padding: 20px;
+}
+        </div>
+
+        <div class="spacing-example">
+            This element has 20px padding and 30px margin.
+        </div>
+
+        <a class="top" href="#top">↑ Top</a>
+
+    </section>
+
+
+    <!-- =========================
+         7. SIZING
+         ========================= -->
+
+    <section>
+
+        <h2 id="sizing">Sizing</h2>
+
+        <p>
+            The <b>width</b> and <b>height</b> properties
+            control the size of an element.
+        </p>
+
+        <div class="code">
+.sizing-example {
+    width: 300px;
+    height: 100px;
+}
+        </div>
+
+        <div class="sizing-example">
+            Width: 300px<br>
+            Height: 100px
+        </div>
+
+        <p>
+            You can also control minimum and maximum sizes:
+        </p>
+
+        <div class="code">
+.box {
+    width: 100%;
+    min-width: 200px;
+    max-width: 600px;
+}
+        </div>
+
+        <a class="top" href="#top">↑ Top</a>
+
+    </section>
+
+
+    <!-- =========================
+         8. DISPLAY
+         ========================= -->
+
+    <section>
+
+        <h2 id="display">Display</h2>
+
+        <p>
+            The <b>display</b> property controls how an element
+            participates in the page layout.
+        </p>
+
+
+        <h3>Block</h3>
+
+        <div class="code">
+.display-block {
+    display: block;
+}
+        </div>
+
+        <div class="display-block">
+            Block element
+        </div>
+
+
+        <h3>Inline</h3>
+
+        <div class="code">
+.display-inline {
+    display: inline;
+}
+        </div>
+
+        <span class="display-inline">
+            Inline element
+        </span>
+
+
+        <h3>Inline-block</h3>
+
+        <div class="code">
+.display-inline-block {
+    display: inline-block;
+    width: 150px;
+}
+        </div>
+
+        <span class="display-inline-block">
+            Inline-block element
+        </span>
+
+
+        <h3>None</h3>
+
+        <div class="code">
+.hidden {
+    display: none;
+}
+        </div>
+
+        <p>
+            <b>display: none</b> removes the element from
+            the page layout.
+        </p>
+
+
+        <a class="top" href="#top">↑ Top</a>
+
+    </section>
+
+
+    <p>
+        <a href="styling.html">← Basic Styling</a>
+    </p>
+
+    <p>
+        <a href="element-behavior.html">
+            Element Behavior →
+        </a>
+    </p>
+
+</body>
+</html>
