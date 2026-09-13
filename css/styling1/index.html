@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Styling</title>
+
+    <style>
+
+        /* =====================================================
+           PAGE STYLING
+           ===================================================== */
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.5;
+        }
+
+        section {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .example {
+            padding: 15px;
+            margin: 10px 0 20px 0;
+        }
+
+        .code {
+            display: block;
+            font-family: monospace;
+            font-size: 14px;
+            background-color: lightgray;
+            padding: 10px;
+            border: 1px solid black;
+            width: 700px;
+            margin: 10px 0 20px 20px;
+            white-space: pre-wrap;
+        }
+
+        .toc {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .toc ul {
+            line-height: 1.8;
+        }
+
+        .top {
+            display: block;
+            margin-top: 20px;
+        }
+
+
+        /* =====================================================
+           A. BASIC STYLING
+           ===================================================== */
+
+        /* 1. Colors */
+
+        .color-example {
+            color: white;
+            background-color: blue;
+        }
+
+
+        /* 2. Typography */
+
+        .typography-example {
+            font-family: Georgia, serif;
+            font-size: 24px;
+            font-weight: bold;
+            font-style: italic;
+            text-align: center;
+            line-height: 1.5;
+            letter-spacing: 2px;
+            text-decoration: underline;
+        }
+
+
+        /* 3. Backgrounds */
+
+        .background-color-example {
+            background-color: lightblue;
+        }
+
+        .background-image-example {
+            width: 300px;
+            height: 120px;
+            background-image: url("image.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+
+        /* 4. Borders */
+
+        .border-example {
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+
+        .solid-border {
+            border: 2px solid black;
+        }
+
+        .dashed-border {
+            border: 2px dashed black;
+        }
+
+        .dotted-border {
+            border: 2px dotted black;
+        }
+
+
+        /* =====================================================
+           B. BOX & DIMENSIONS
+           ===================================================== */
+
+        /* 5. Box Model */
+
+        .box-model-example {
+            width: 200px;
+            padding: 20px;
+            border: 5px solid black;
+            margin: 20px;
+            background-color: lightblue;
+        }
+
+
+        /* 6. Spacing */
+
+        .spacing-example {
+            margin: 30px;
+            padding: 20px;
+            background-color: lightgreen;
+        }
+
+
+        /* 7. Sizing */
+
+        .sizing-example {
+            width: 300px;
+            height: 100px;
+            background-color: lightblue;
+        }
+
+
+        /* 8. Display */
+
+        .display-block {
+            display: block;
+            background-color: lightgreen;
+            padding: 10px;
+        }
+
+        .display-inline {
+            display: inline;
+            background-color: yellow;
+            padding: 10px;
+        }
+
+        .display-inline-block {
+            display: inline-block;
+            width: 150px;
+            padding: 10px;
+            background-color: lightpink;
+        }
+
+
+        /* =====================================================
+           C. ELEMENT BEHAVIOR
+           ===================================================== */
+
+        /* 9. Positioning */
+
+        .position-container {
+            position: relative;
+            height: 120px;
+            border: 1px solid black;
+        }
+
+        .position-example {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px;
+            background-color: orange;
+        }
+
+
+        /* 10. Overflow */
+
+        .overflow-example {
+            width: 250px;
+            height: 80px;
+            overflow: auto;
+            border: 1px solid black;
+        }
+
+
+        /* 11. Visibility */
+
+        .visibility-hidden {
+            visibility: hidden;
+        }
+
+
+        /* =====================================================
+           D. COMPONENT STYLING
+           ===================================================== */
+
+        /* 12. Lists */
+
+        .list-example {
+            list-style-type: square;
+        }
+
+        .list-example li {
+            margin-bottom: 8px;
+        }
+
+
+        /* 13. Tables */
+
+        .table-example {
+            border-collapse: collapse;
+        }
+
+        .table-example th,
+        .table-example td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+
+        /* 14. Images */
+
+        .image-example {
+            width: 300px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+
+        /* 15. Shadows & Effects */
+
+        .shadow-example {
+            width: 200px;
+            padding: 20px;
+            box-shadow: 0 4px 10px gray;
+        }
+
+
+        /* =====================================================
+           E. INTERACTIVE STYLING
+           ===================================================== */
+
+        /* 16. Pseudo-classes */
+
+        .hover-button {
+            padding: 10px 20px;
+        }
+
+        .hover-button:hover {
+            background-color: blue;
+            color: white;
+        }
+
+
+        /* 17. Pseudo-elements */
+
+        .pseudo-example::before {
+            content: "★ ";
+        }
+
+
+        /* 18. Transitions */
+
+        .transition-button {
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+
+        .transition-button:hover {
+            background-color: green;
+            color: white;
+        }
+
+
+        /* 19. Transforms */
+
+        .transform-example {
+            display: inline-block;
+            padding: 20px;
+            background-color: lightblue;
+            transition: transform 0.3s;
+        }
+
+        .transform-example:hover {
+            transform: scale(1.2);
+        }
+
+
+        /* 20. Animations */
+
+        .animation-example {
+            width: 50px;
+            height: 50px;
+            background-color: orange;
+            animation: move 2s infinite alternate;
+        }
+
+        @keyframes move {
+
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(200px);
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body id="top">
+
+    <h1>CSS Styling</h1>
+
+
+    <!-- =====================================================
+         TABLE OF CONTENTS
+         ===================================================== -->
+
+    <div class="toc">
+
+        <h2>CSS Styling Roadmap</h2>
+
+        <ul>
+
+            <li>
+                <b>A. Basic Styling</b>
+
+                <ul>
+                    <li><a href="#colors">1. Colors</a></li>
+                    <li><a href="#typography">2. Typography</a></li>
+                    <li><a href="#backgrounds">3. Backgrounds</a></li>
+                    <li><a href="#borders">4. Borders</a></li>
+                </ul>
+
+            </li>
+
+
+            <li>
+                <b>B. Box & Dimensions</b>
+
+                <ul>
+                    <li><a href="#box-model">5. Box Model</a></li>
+                    <li><a href="#spacing">6. Spacing</a></li>
+                    <li><a href="#sizing">7. Sizing</a></li>
+                    <li><a href="#display">8. Display</a></li>
+                </ul>
+
+            </li>
+
+
+            <li>
+                <b>C. Element Behavior</b>
+
+                <ul>
+                    <li><a href="#positioning">9. Positioning</a></li>
+                    <li><a href="#overflow">10. Overflow</a></li>
+                    <li><a href="#visibility">11. Visibility</a></li>
+                </ul>
+
+            </li>
+
+
+            <li>
+                <b>D. Component Styling</b>
+
+                <ul>
+                    <li><a href="#lists">12. Lists</a></li>
+                    <li><a href="#tables">13. Tables</a></li>
+                    <li><a href="#images">14. Images</a></li>
+                    <li><a href="#shadows">15. Shadows & Effects</a></li>
+                </ul>
+
+            </li>
+
+
+            <li>
+                <b>E. Interactive Styling</b>
+
+                <ul>
+                    <li><a href="#pseudo-classes">16. Pseudo-classes</a></li>
+                    <li><a href="#pseudo-elements">17. Pseudo-elements</a></li>
+                    <li><a href="#transitions">18. Transitions</a></li>
+                    <li><a href="#transforms">19. Transforms</a></li>
+                    <li><a href="#animations">20. Animations</a></li>
+                </ul>
+
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- =====================================================
+         A. BASIC STYLING
+         ===================================================== -->
+
+    <section>
+
+        <h2>A. Basic Styling</h2>
+
+
+        <!-- 1. COLORS -->
+
+        <h3 id="colors">1. Colors</h3>
+
+        <p>
+            The <b>color</b> property changes the text color.
+            The <b>background-color</b> property changes the
+            background color.
+        </p>
+
+        <div class="code">
+.color-example {
+    color: white;
+    background-color: blue;
+}
+        </div>
+
+        <p class="color-example example">
+            White text with a blue background.
+        </p>
+
+
+        <!-- 2. TYPOGRAPHY -->
+
+        <h3 id="typography">2. Typography</h3>
+
+        <p>
+            Typography controls the appearance and presentation
+            of text.
+        </p>
+
+        <div class="code">
+.typography-example {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    text-decoration: underline;
+}
+        </div>
+
+        <p class="typography-example">
+            This is a typography example.
+        </p>
+
+
+        <!-- 3. BACKGROUNDS -->
+
+        <h3 id="backgrounds">3. Backgrounds</h3>
+
+        <p>
+            Background properties control the background color
+            or image of an element.
+        </p>
+
+        <div class="code">
+.background-color-example {
+    background-color: lightblue;
+}
+        </div>
+
+        <div class="background-color-example example">
+            This box has a light blue background.
+        </div>
+
+        <div class="code">
+.background-image-example {
+    width: 300px;
+    height: 120px;
+
+    background-image: url("image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+        </div>
+
+        <div class="background-image-example">
+        </div>
+
+
+        <!-- 4. BORDERS -->
+
+        <h3 id="borders">4. Borders</h3>
+
+        <p>
+            Borders are drawn around an element.
+        </p>
+
+        <div class="code">
+.border-example {
+    border: 2px solid black;
+    border-radius: 10px;
+}
+        </div>
+
+        <div class="border-example example">
+            Black border with rounded corners.
+        </div>
+
+        <div class="code">
+.solid-border {
+    border: 2px solid black;
+}
+
+.dashed-border {
+    border: 2px dashed black;
+}
+
+.dotted-border {
+    border: 2px dotted black;
+}
+        </div>
+
+        <p class="solid-border example">
+            Solid border
+        </p>
+
+        <p class="dashed-border example">
+            Dashed border
+        </p>
+
+        <p class="dotted-border example">
+            Dotted border
+        </p>
+
+
+        <a class="top" href="#top">↑ Top</a>
+
+    </section>
+
+
+    <!-- =====================================================
+         B. BOX & DIMENSIONS
+         ===================================================== -->
+
+    <section>
+
+        <h2>B. Box & Dimensions</h2>
+
+
+        <!-- 5. BOX MODEL -->
+
+        <h3 id="box-model">5. Box Model</h3>
+
+        <p>
+            Every HTML element can be treated as a box consisting
+            of content, padding, border, and margin.
+        </p>
+
+        <div class="code">
+.box-model-example {
+    width: 200px;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 20px;
+}
+        </div>
+
+        <div class="box-model-example">
+            Content
+        </div>
+
+
+        <!-- 6. SPACING -->
+
+        <h3 id="spacing">6. Spacing</h3>
+
+        <p>
+            <b>Padding</b> creates space inside an element.
+            <b>Margin</b> creates space outside an element.
+        </p>
+
+        <div class="code">
+.spacing-example {
+    margin: 30px;
+    padding: 20px;
+}
+        </div>
+
+        <div class="spacing-example">
+            Content with margin and padding.
+        </div>
+
+
+        <!-- 7. SIZING -->
+
+        <h3 id="sizing">7. Sizing</h3>
+
+        <p>
+            The <b>width</b> and <b>height</b> properties control
+            the dimensions of an element.
+        </p>
+
+        <div class="code">
+.sizing-example {
+    width: 300px;
+    height: 100px;
+}
+        </div>
+
+        <div class="sizing-example">
+            300px × 100px
+        </div>
+
+
+        <!-- 8. DISPLAY -->
+
+        <h3 id="display">8. Display</h3>
+
+        <p>
+            The <b>display</b> property controls how an element
+            participates in the page layout.
+        </p>
+
+        <div class="code">
+.display-block {
+    display: block;
+}
+
+.display-inline {
+    display: inline;
+}
+
+.display-inline-block {
+    display: inline-block;
+    width: 150px;
+}
+        </div>
+
+        <div class="display-block">
+            Block element
+        </div>
+
+        <span class="display-inline">
+            Inline element
+        </span>
+
+        <span class="display-inline-block">
+            Inline-block element
+        </span>
+
+
+        <a class="top" href="#top">↑ Top</a>
+
+    </section>
+
+
+    <!-- =====================================================
+         C. ELEMENT BEHAVIOR
+         ===================================================== -->
+
+    <section>
+
+        <h2>C. Element Behavior</h2>
+
+
+        <!-- 9. POSITIONING -->
+
+        <h3 id="positioning">9. Positioning</h3>
+
+        <p>
+            Positioning allows you to control the location
+            of an element.
+        </p>
+
+        <div class="code">
+.container {
+    position: relative;
+}
+
+.box {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+        </div>
+
+        <div class="position-container">
+
+            <div class="position-example">
+                Positioned box
+            </div>
+
+        </div>
+
+
+        <!-- 10. OVERFLOW -->
+
+        <h3 id="overflow">10. Overflow</h3>
+
+        <p>
+            Overflow controls what happens when content does not
+            fit inside an element.
+        </p>
+
+        <div class="code">
+.overflow-example {
+    width: 250px;
+    height: 80px;
+    overflow: auto;
+}
+        </div>
+
+        <div class="overflow-example">
+
+            This is a long piece of text inside a small box.
+            The content does not fit within the specified height,
+            so a scrollbar appears because overflow is set to auto.
+
+        </div>
+
+
+        <!-- 11. VISIBILITY -->
+
+        <h3 id="visibility">11. Visibility</h3>
+
+        <p>
+            <b>visibility: hidden</b> hides an element while
+            keeping its space in the layout.
+        </p>
+
+        <div class="code">
+.visibility-hidden {
+    visibility: hidden;
+}
+        </div>
+
+        <p>Text before the hidden element.</p>
+
+        <p class="visibility-hidden">
+            This text is hidden.
+        </p>
+
+        <p>Text after the hidden element.</p>
+
+
+        <a class="top" href="#top">↑ Top</a>
+
+    </section>
+
+
+    <!-- =====================================================
+         D. COMPONENT STYLING
+         ===================================================== -->
+
+    <section>
+
+        <h2>D. Component Styling</h2>
+
+
+        <!-- 12. LISTS -->
+
+        <h3 id="lists">12. Lists</h3>
+
+        <p>
+            List properties control the appearance of
+            ordered and unordered lists.
+        </p>
+
+        <div class="code">
+.list-example {
+    list-style-type: square;
+}
+
+.list-example li {
+    margin-bottom: 8px;
+}
+        </div>
+
+        <ul class="list-example">
+
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+
+        </ul>
+
+
+        <!-- 13. TABLES -->
+
+        <h3 id="tables">13. Tables</h3>
+
+        <p>
+            CSS can control table borders, spacing, alignment,
+            and other visual properties.
+        </p>
+
+        <div class="code">
+.table-example {
+    border-collapse: collapse;
+}
+
+.table-example th,
+.table-example td {
+    border: 1px solid black;
+    padding: 10px;
+}
+        </div>
+
+        <table class="table-example">
+
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+
+            <tr>
+                <td>John</td>
+                <td>25</td>
+            </tr>
+
+            <tr>
+                <td>Mary</td>
+                <td>30</td>
+            </tr>
+
+        </table>
+
+
+        <!-- 14. IMAGES -->
+
+        <h3 id="images">14. Images</h3>
+
+        <p>
+            The <b>object-fit</b> property controls how an image
+            fits inside its defined dimensions.
+        </p>
+
+        <div class="code">
+.image-example {
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
+}
+        </div>
+
+        <img
+            class="image-example"
+            src="image.jpg"
+            alt="Example image"
+        >
+
+
+        <!-- 15. SHADOWS -->
+
+        <h3 id="shadows">15. Shadows & Effects</h3>
+
+        <p>
+            The <b>box-shadow</b> property adds a shadow around
+            an element.
+        </p>
+
+        <div class="code">
+.shadow-example {
+    width: 200px;
+    padding: 20px;
+    box-shadow: 0 4px 10px gray;
+}
+        </div>
+
+        <div class="shadow-example">
+            This box has a shadow.
+        </div>
+
+
+        <a class="top" href="#top">↑ Top</a>
+
+    </section>
+
+
+    <!-- =====================================================
+         E. INTERACTIVE STYLING
+         ===================================================== -->
+
+    <section>
+
+        <h2>E. Interactive Styling</h2>
+
+
+        <!-- 16. PSEUDO-CLASSES -->
+
+        <h3 id="pseudo-classes">16. Pseudo-classes</h3>
+
+        <p>
+            Pseudo-classes style an element based on its state.
+        </p>
+
+        <div class="code">
+.hover-button:hover {
+    background-color: blue;
+    color: white;
+}
+        </div>
+
+        <button class="hover-button">
+            Move the mouse over me
+        </button>
+
+
+        <!-- 17. PSEUDO-ELEMENTS -->
+
+        <h3 id="pseudo-elements">17. Pseudo-elements</h3>
+
+        <p>
+            Pseudo-elements style a specific part of an element
+            or insert generated content.
+        </p>
+
+        <div class="code">
+.pseudo-example::before {
+    content: "★ ";
+}
+        </div>
+
+        <p class="pseudo-example">
+            This text has content added before it.
+        </p>
+
+
+        <!-- 18. TRANSITIONS -->
+
+        <h3 id="transitions">18. Transitions</h3>
+
+        <p>
+            Transitions make changes between CSS states happen
+            smoothly.
+        </p>
+
+        <div class="code">
+.transition-button {
+    transition: background-color 0.3s;
+}
+
+.transition-button:hover {
+    background-color: green;
+    color: white;
+}
+        </div>
+
+        <button class="transition-button">
+            Hover over me
+        </button>
+
+
+        <!-- 19. TRANSFORMS -->
+
+        <h3 id="transforms">19. Transforms</h3>
+
+        <p>
+            Transforms can move, resize, rotate, or skew an element.
+        </p>
+
+        <div class="code">
+.transform-example {
+    transition: transform 0.3s;
+}
+
+.transform-example:hover {
+    transform: scale(1.2);
+}
+        </div>
+
+        <div class="transform-example">
+            Hover over me
+        </div>
+
+
+        <!-- 20. ANIMATIONS -->
+
+        <h3 id="animations">20. Animations</h3>
+
+        <p>
+            Animations allow an element to change through multiple
+            stages automatically.
+        </p>
+
+        <div class="code">
+.animation-example {
+    animation: move 2s infinite alternate;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(200px);
+    }
+}
+        </div>
+
+        <div class="animation-example"></div>
+
+
+        <a class="top" href="#top">↑ Top</a>
+
+    </section>
+
+</body>
+</html>
